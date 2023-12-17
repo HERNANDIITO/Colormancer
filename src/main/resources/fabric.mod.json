@@ -5,18 +5,21 @@
 	"name": "Colormancer",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"HERNANDIITO"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "GNU AGPLv3",
 	"icon": "assets/colormancer/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"hernandiito.colormancer.Colormancer"
+		],
+		"client": [
+			"hernandiito.colormancer.ColormancerClient"
 		],
 		"fabric-datagen": [
 			"hernandiito.colormancer.ColormancerDataGenerator"
