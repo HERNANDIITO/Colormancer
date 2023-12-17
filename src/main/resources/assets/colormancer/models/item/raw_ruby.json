@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "colormancer:item/raw_ruby"
+  }
+}

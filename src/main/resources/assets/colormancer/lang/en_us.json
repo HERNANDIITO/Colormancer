@@ -1,0 +1,13 @@
+{
+  "item.colormancer.ruby": "Ruby",
+  "item.colormancer.raw_ruby": "Raw ruby",
+  "item.colormancer.empty_vial": "Empty vial",
+
+  "itemGroup.colormancer": "Colormancer items",
+
+  "effect.colormancer.freeze": "Freeze",
+  "effect.colormancer.cyan": "Cyan",
+  "effect.colormancer.magenta": "Magenta",
+  "effect.colormancer.yellow": "Yellow",
+  "effect.colormancer.black": "Black"
+}
