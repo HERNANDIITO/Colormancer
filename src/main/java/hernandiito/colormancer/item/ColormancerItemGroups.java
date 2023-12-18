@@ -13,8 +13,9 @@ public class ColormancerItemGroups {
     public static final ItemGroup COLORMANCER_GROUP = Registry.register(Registries.ITEM_GROUP,
         new Identifier(Colormancer.MOD_ID, "colormancer"),
         FabricItemGroup.builder().displayName(Text.translatable("itemGroup.colormancer"))
-            .icon(() -> new ItemStack(ColormancerItems.EMPTY_VIAL)).entries((displayContext, entries) -> {
+            .icon(() -> new ItemStack(ColormancerItems.COLOR_VIAL)).entries((displayContext, entries) -> {
                 entries.add(ColormancerItems.EMPTY_VIAL);
+                entries.add(ColormancerItems.COLOR_VIAL);
             }).build());
     public static void registerItemGroups() {
         Colormancer.LOGGER.info("Registering item groups for: " + Colormancer.MOD_ID);
