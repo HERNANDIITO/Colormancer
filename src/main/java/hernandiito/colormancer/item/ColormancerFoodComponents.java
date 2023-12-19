@@ -9,4 +9,10 @@ public class ColormancerFoodComponents {
             .alwaysEdible()
             .snack()
             .build();
+    public static final FoodComponent WATER_VIAL = new FoodComponent.Builder()
+            .hunger(0)
+            .saturationModifier(0.1f)
+            .alwaysEdible()
+            .snack()
+            .build();
 }

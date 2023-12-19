@@ -15,7 +15,10 @@ public class ColormancerItemGroups {
         FabricItemGroup.builder().displayName(Text.translatable("itemGroup.colormancer"))
             .icon(() -> new ItemStack(ColormancerItems.COLOR_VIAL)).entries((displayContext, entries) -> {
                 entries.add(ColormancerItems.EMPTY_VIAL);
+                entries.add(ColormancerItems.WATER_VIAL);
                 entries.add(ColormancerItems.COLOR_VIAL);
+                entries.add(ColormancerItems.DYE_MIXTURE);
+                entries.add(ColormancerItems.PIGMENTS);
             }).build());
     public static void registerItemGroups() {
         Colormancer.LOGGER.info("Registering item groups for: " + Colormancer.MOD_ID);

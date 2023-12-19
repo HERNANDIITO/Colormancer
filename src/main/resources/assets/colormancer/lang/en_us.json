@@ -2,13 +2,18 @@
   "item.colormancer.ruby": "Ruby",
   "item.colormancer.raw_ruby": "Raw ruby",
   "item.colormancer.empty_vial": "Empty vial",
+  "item.colormancer.water_vial": "Water vial",
   "item.colormancer.color_vial": "Concentrated dye",
+  "item.colormancer.dye_mixture": "Dye mixture",
+  "item.colormancer.pigments": "Pigments",
 
   "itemGroup.colormancer": "Colormancer items",
 
   "effect.colormancer.freeze": "Freeze",
-  "effect.colormancer.cyan": "Cyan",
-  "effect.colormancer.magenta": "Magenta",
-  "effect.colormancer.yellow": "Yellow",
-  "effect.colormancer.black": "Black"
+  "effect.colormancer.cyan": "Cyan Senses",
+  "effect.colormancer.magenta": "Magenta Freedom",
+  "effect.colormancer.yellow": "Yellow Soul",
+  "effect.colormancer.black": "Black Strength",
+  "effect.colormancer.white": "White Sickness"
+
 }
