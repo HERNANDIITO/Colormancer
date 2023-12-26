@@ -1,5 +1,6 @@
 package hernandiito.colormancer;
 
+import hernandiito.colormancer.block.ColormancerBlocks;
 import hernandiito.colormancer.effect.ColormancerEffects;
 import hernandiito.colormancer.item.ColormancerItemGroups;
 import hernandiito.colormancer.item.ColormancerItems;
@@ -18,5 +19,6 @@ public class Colormancer implements ModInitializer {
 		ColormancerItemGroups.registerItemGroups();
 		ColormancerItems.registerModItems();
 		ColormancerEffects.registerEffects();
+		ColormancerBlocks.registerModBlocks();
 	}
 }
