@@ -14,6 +14,8 @@
   "effect.colormancer.magenta": "Magenta Freedom",
   "effect.colormancer.yellow": "Yellow Soul",
   "effect.colormancer.black": "Black Strength",
-  "effect.colormancer.white": "White Sickness"
+  "effect.colormancer.white": "White Sickness",
+
+  "block.colormancer.colormancer_lectern": "Colormancer lectern"
 
 }

@@ -1,6 +1,7 @@
 package hernandiito.colormancer.block;
 
 import hernandiito.colormancer.Colormancer;
+import hernandiito.colormancer.block.custom.ColormancerLecternBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -13,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 public class ColormancerBlocks {
     public static final Block COLORMANCER_LECTERN = registerBlock("colormancer_lectern",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.WOOD)));
+            new ColormancerLecternBlock(FabricBlockSettings.copyOf(Blocks.LECTERN).nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

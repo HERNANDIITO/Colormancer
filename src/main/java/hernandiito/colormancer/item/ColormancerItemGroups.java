@@ -1,6 +1,7 @@
 package hernandiito.colormancer.item;
 
 import hernandiito.colormancer.Colormancer;
+import hernandiito.colormancer.block.ColormancerBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -19,6 +20,7 @@ public class ColormancerItemGroups {
                 entries.add(ColormancerItems.COLOR_VIAL);
                 entries.add(ColormancerItems.DYE_MIXTURE);
                 entries.add(ColormancerItems.PIGMENTS);
+                entries.add(ColormancerBlocks.COLORMANCER_LECTERN);
             }).build());
     public static void registerItemGroups() {
         Colormancer.LOGGER.info("Registering item groups for: " + Colormancer.MOD_ID);
