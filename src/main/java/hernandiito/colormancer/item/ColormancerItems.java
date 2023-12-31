@@ -10,8 +10,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ColormancerItems {
-    public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
-    public static final Item RAW_RUBY = registerItem("raw_ruby", new Item(new FabricItemSettings()));
     public static final Item EMPTY_VIAL = registerItem("empty_vial", (Item) new EmptyVial(new FabricItemSettings().maxCount(16)));
     public static final Item WATER_VIAL = registerItem("water_vial", (Item) new ColorVial(new FabricItemSettings().maxCount(16).food(ColormancerFoodComponents.WATER_VIAL)));
     public static final Item COLOR_VIAL = registerItem("color_vial", (Item) new ColorVial(new FabricItemSettings().maxCount(16).food(ColormancerFoodComponents.COLOR_VIAL)));

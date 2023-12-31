@@ -27,11 +27,6 @@ public class ColormancerLecternBlock extends BlockWithEntity implements BlockEnt
         return BlockRenderType.MODEL;
     }
 
-    @Override
-    protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return null;
-    }
-
     @Nullable
     @Override
     public BlockEntity createBlockEntity( BlockPos pos, BlockState state ) {

@@ -5,7 +5,7 @@
 	"name": "Colormancer",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"HERNANDIITO"
+		"hernanfito"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -29,8 +29,8 @@
 		"colormancer.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.2",
-		"minecraft": "~1.20.4",
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
