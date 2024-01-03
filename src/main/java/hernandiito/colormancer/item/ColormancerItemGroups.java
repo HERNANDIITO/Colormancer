@@ -20,6 +20,7 @@ public class ColormancerItemGroups {
                 entries.add(ColormancerItems.COLOR_VIAL);
                 entries.add(ColormancerItems.DYE_MIXTURE);
                 entries.add(ColormancerItems.PIGMENTS);
+                entries.add(ColormancerItems.COLORMANCER_BOOK);
                 entries.add(ColormancerBlocks.COLORMANCER_LECTERN);
             }).build());
     public static void registerItemGroups() {

@@ -15,12 +15,14 @@ public class ColormancerItems {
     public static final Item COLOR_VIAL = registerItem("color_vial", (Item) new ColorVial(new FabricItemSettings().maxCount(16).food(ColormancerFoodComponents.COLOR_VIAL)));
     public static final Item DYE_MIXTURE = registerItem("dye_mixture", new Item(new FabricItemSettings()));
     public static final Item PIGMENTS = registerItem("pigments", new Item(new FabricItemSettings()));
+    public static final Item COLORMANCER_BOOK = registerItem("colormancer_book", new Item(new FabricItemSettings().maxCount(1)));
 
     private static void addItemsToIngredientTabItemsGroup(FabricItemGroupEntries entries) {
         entries.add(EMPTY_VIAL);
         entries.add(COLOR_VIAL);
         entries.add(DYE_MIXTURE);
         entries.add(PIGMENTS);
+        entries.add(COLORMANCER_BOOK);
     }
 
     private static Item registerItem(String name, Item item) {
