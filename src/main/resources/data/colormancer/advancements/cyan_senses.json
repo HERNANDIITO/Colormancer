@@ -1,0 +1,28 @@
+{
+    "display": {
+        "title": {
+            "text": "Cyan Senses"
+        },
+        "description": {
+            "text": "Description"
+        },
+        "icon": {
+            "item": "minecraft:cyan_dye"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "effect": {
+            "trigger": "minecraft:effects_changed",
+            "conditions": {
+                "effects": {
+                    "colormancer:cyan": {}
+                }
+            }
+        }
+    },
+    "parent": "colormancer:dye_eater"
+}

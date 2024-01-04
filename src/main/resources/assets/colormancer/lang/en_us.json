@@ -15,6 +15,9 @@
   "effect.colormancer.black": "Black Strength",
   "effect.colormancer.white": "White Sickness",
 
-  "block.colormancer.colormancer_lectern": "Colormancer lectern"
+  "block.colormancer.colormancer_lectern": "Colormancer lectern",
+
+  "advancements.colormancer.root.title": "Colormancer",
+  "advancements.colormancer.root.description": "Become a Colormancer"
 
 }
