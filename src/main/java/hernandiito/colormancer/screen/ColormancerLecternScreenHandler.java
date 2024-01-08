@@ -2,6 +2,7 @@ package hernandiito.colormancer.screen;
 
 import hernandiito.colormancer.block.entity.ColormancerLecternEntity;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.LecternBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -25,9 +26,9 @@ public class ColormancerLecternScreenHandler extends ScreenHandler {
         this.blockEntity = (ColormancerLecternEntity) blockEntity;
 
         this.addSlot(new Slot(inventory, 0, 32, 37));
-        this.addSlot(new Slot(inventory, 1, 8, 27));
+        this.addSlot(new Slot(inventory, 1, 8,  27));
         this.addSlot(new Slot(inventory, 2, 56, 27));
-        this.addSlot(new Slot(inventory, 3, 8, 47));
+        this.addSlot(new Slot(inventory, 3, 8,  47));
         this.addSlot(new Slot(inventory, 4, 56, 47));
 
         addPlayerHotbar(playerInventory);
