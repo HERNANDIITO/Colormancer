@@ -1,9 +1,11 @@
 package hernandiito.colormancer;
 
 import hernandiito.colormancer.block.ColormancerBlocks;
+import hernandiito.colormancer.block.entity.ColormancerBlockEntities;
 import hernandiito.colormancer.effect.ColormancerEffects;
 import hernandiito.colormancer.item.ColormancerItemGroups;
 import hernandiito.colormancer.item.ColormancerItems;
+import hernandiito.colormancer.screen.ColormancerScreenHandlers;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -20,5 +22,7 @@ public class Colormancer implements ModInitializer {
 		ColormancerItems.registerModItems();
 		ColormancerEffects.registerEffects();
 		ColormancerBlocks.registerModBlocks();
+		ColormancerScreenHandlers.registerScreenHandlers();
+		ColormancerBlockEntities.registerBlockEntities();
 	}
 }

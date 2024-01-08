@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class ColormancerBlockEntities {
     public static final BlockEntityType<ColormancerLecternEntity> COLORMANCER_LECTERN =
-            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Colormancer.MOD_ID, "colormancer_lectern"),
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Colormancer.MOD_ID, "colormancer_lectern_be"),
                     FabricBlockEntityTypeBuilder.create(ColormancerLecternEntity::new,
                             ColormancerBlocks.COLORMANCER_LECTERN).build());
 
