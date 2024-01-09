@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:colormancer/root",
+  "criteria": {
+    "ate_apple": {
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.colormancer.root.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "colormancer:dye_mixture"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.colormancer.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "ate_apple"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

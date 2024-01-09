@@ -24,5 +24,6 @@ public class Colormancer implements ModInitializer {
 		ColormancerBlocks.registerModBlocks();
 		ColormancerScreenHandlers.registerScreenHandlers();
 		ColormancerBlockEntities.registerBlockEntities();
+
 	}
 }

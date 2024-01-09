@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "become_a_colormancer": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/block/gray_glazed_terracotta.png",
+    "description": {
+      "translate": "advancements.colormancer.root.description"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "colormancer:pigments"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.colormancer.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "become_a_colormancer"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

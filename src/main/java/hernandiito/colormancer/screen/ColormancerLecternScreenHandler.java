@@ -1,15 +1,23 @@
 package hernandiito.colormancer.screen;
 
+import com.mojang.authlib.GameProfile;
 import hernandiito.colormancer.block.entity.ColormancerLecternEntity;
+import net.minecraft.advancement.PlayerAdvancementTracker;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.LecternBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.network.packet.c2s.common.SyncedClientOptions;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.world.World;
+
+import java.util.Objects;
 
 public class ColormancerLecternScreenHandler extends ScreenHandler {
     private final Inventory inventory;
@@ -78,4 +86,6 @@ public class ColormancerLecternScreenHandler extends ScreenHandler {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 145));
         }
     }
+
+
 }
