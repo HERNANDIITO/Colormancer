@@ -1,0 +1,24 @@
+{
+  "item.colormancer.empty_vial": "Empty vial",
+  "item.colormancer.water_vial": "Water vial",
+  "item.colormancer.color_vial": "Concentrated color",
+  "item.colormancer.dye_mixture": "Dye mixture",
+  "item.colormancer.pigments": "Pigments",
+  "item.colormancer.colormancer_book": "Vademecum Cromaticus",
+
+  "itemGroup.colormancer": "Colormancer items",
+
+  "effect.colormancer.freeze": "Freeze",
+  "effect.colormancer.cyan": "Cyan Senses",
+  "effect.colormancer.magenta": "Magenta Freedom",
+  "effect.colormancer.yellow": "Yellow Soul",
+  "effect.colormancer.black": "Black Strength",
+  "effect.colormancer.white": "White Sickness",
+
+  "block.colormancer.colormancer_lectern": "Colormancer lectern",
+
+  "gui.colormancer.colormancer_lectern": "Colormancer lectern",
+
+  "advancements.colormancer.root.title": "Colormancer",
+  "advancements.colormancer.root.description": "Become a Colormancer"
+}

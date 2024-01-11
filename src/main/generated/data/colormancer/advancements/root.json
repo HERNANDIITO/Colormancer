@@ -1,19 +1,19 @@
 {
-  "parent": "colormancer:root",
   "criteria": {
-    "ate_apple": {
-      "trigger": "minecraft:consume_item"
+    "become_a_colormancer": {
+      "trigger": "minecraft:tick"
     }
   },
   "display": {
     "announce_to_chat": false,
+    "background": "minecraft:textures/block/gray_glazed_terracotta.png",
     "description": {
       "translate": "advancements.colormancer.root.description"
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
-      "item": "colormancer:dye_mixture"
+      "item": "colormancer:pigments"
     },
     "show_toast": true,
     "title": {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "ate_apple"
+      "become_a_colormancer"
     ]
   ],
   "sends_telemetry_event": true

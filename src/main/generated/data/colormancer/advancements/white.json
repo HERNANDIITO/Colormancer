@@ -1,8 +1,13 @@
 {
-  "parent": "colormancer:root",
+  "parent": "colormancer:dye_eater",
   "criteria": {
-    "ate_apple": {
-      "trigger": "minecraft:consume_item"
+    "use_white": {
+      "conditions": {
+        "effects": {
+          "colormancer:white": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
     }
   },
   "display": {
@@ -11,9 +16,9 @@
       "translate": "advancements.colormancer.root.description"
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
-      "item": "colormancer:dye_mixture"
+      "item": "minecraft:white_dye"
     },
     "show_toast": true,
     "title": {
@@ -22,7 +27,7 @@
   },
   "requirements": [
     [
-      "ate_apple"
+      "use_white"
     ]
   ],
   "sends_telemetry_event": true
