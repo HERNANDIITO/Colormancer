@@ -2,7 +2,7 @@ package hernandiito.colormancer.item;
 
 import net.minecraft.item.FoodComponent;
 
-public class ColormancerFoodComponents {
+public class ModFoodComponents {
     public static final FoodComponent COLOR_VIAL = new FoodComponent.Builder()
             .hunger(0)
             .saturationModifier(0.1f)

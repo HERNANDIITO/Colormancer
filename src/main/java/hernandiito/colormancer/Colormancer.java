@@ -1,11 +1,10 @@
 package hernandiito.colormancer;
 
-import hernandiito.colormancer.block.ColormancerBlocks;
-import hernandiito.colormancer.block.entity.ColormancerBlockEntities;
-import hernandiito.colormancer.effect.ColormancerEffects;
-import hernandiito.colormancer.item.ColormancerItemGroups;
-import hernandiito.colormancer.item.ColormancerItems;
-import hernandiito.colormancer.screen.ColormancerScreenHandlers;
+import hernandiito.colormancer.block.ModBlocks;
+import hernandiito.colormancer.effect.ModStatusEffects;
+import hernandiito.colormancer.item.ModItemGroups;
+import hernandiito.colormancer.item.ModItems;
+import hernandiito.colormancer.screen.ModScreenHandlerTypes;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -13,17 +12,14 @@ import org.slf4j.LoggerFactory;
 
 public class Colormancer implements ModInitializer {
 	public static final String MOD_ID = "colormancer";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
-		ColormancerItemGroups.registerItemGroups();
-		ColormancerItems.registerModItems();
-		ColormancerEffects.registerEffects();
-		ColormancerBlocks.registerModBlocks();
-		ColormancerScreenHandlers.registerScreenHandlers();
-		ColormancerBlockEntities.registerBlockEntities();
-
+		ModItemGroups.registerModItemGroups();
+		ModItems.registerModItems();
+		ModStatusEffects.registerModStatusEffects();
+		ModBlocks.registerModBlocks();
+		ModScreenHandlerTypes.registerModScreenHandlerTypes();
 	}
 }

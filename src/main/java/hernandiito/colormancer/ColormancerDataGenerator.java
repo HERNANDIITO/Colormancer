@@ -9,15 +9,11 @@ public class ColormancerDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-		pack.addProvider(ColormancerAdvancementProvider::new);
-
-		pack.addProvider(ColormancerBlockTagProvider::new);
-		pack.addProvider(ColormancerItemTagProvider::new);
-
-		pack.addProvider(ColormancerBlockLootTableProvider::new);
-
-		pack.addProvider(ColormancerModelProvider::new);
-
-		pack.addProvider(ColormancerRecipeProvider::new);
+		pack.addProvider(ModBlockTagProvider::new);
+		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModAdvancementProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModBlockLootTableProvider::new);
+		pack.addProvider(ModRecipeProvider::new);
 	}
 }

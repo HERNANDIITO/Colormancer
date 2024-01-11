@@ -9,14 +9,14 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-public class ColorVial extends Item {
-    public ColorVial(Item.Settings settings) {
+public class ColorVialItem extends Item {
+    public ColorVialItem(Item.Settings settings) {
         super(settings.maxCount(16));
     }
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        return ItemUsage.exchangeStack(stack, world.getPlayerByUuid(user.getUuid()), ColormancerItems.EMPTY_VIAL.getDefaultStack());
+        return ItemUsage.exchangeStack(stack, world.getPlayerByUuid(user.getUuid()), ModItems.EMPTY_VIAL.getDefaultStack());
     }
 
     @Override

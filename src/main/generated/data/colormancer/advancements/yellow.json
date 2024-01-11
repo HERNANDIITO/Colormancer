@@ -1,10 +1,10 @@
 {
-  "parent": "minecraft:colormancer/dye_eater",
+  "parent": "colormancer:dye_eater",
   "criteria": {
-    "use_white": {
+    "use_yellow": {
       "conditions": {
         "effects": {
-          "colormancer:white": {}
+          "colormancer:yellow": {}
         }
       },
       "trigger": "minecraft:effects_changed"
@@ -18,7 +18,7 @@
     "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "minecraft:white_dye"
+      "item": "minecraft:yellow_dye"
     },
     "show_toast": true,
     "title": {
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "use_white"
+      "use_yellow"
     ]
   ],
   "sends_telemetry_event": true
