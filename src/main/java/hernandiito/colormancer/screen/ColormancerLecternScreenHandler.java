@@ -1,52 +1,64 @@
 package hernandiito.colormancer.screen;
 
-import hernandiito.colormancer.block.entity.ColormancerLecternEntity;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.LecternBlockEntity;
+import hernandiito.colormancer.block.ModBlocks;
+import hernandiito.colormancer.item.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.PacketByteBuf;
+import net.minecraft.item.Items;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.Slot;
 
 public class ColormancerLecternScreenHandler extends ScreenHandler {
-    private final Inventory inventory;
-    public final ColormancerLecternEntity blockEntity;
+    private static final int BOOK_SLOT = 0;
+    private static final int CYAN_SLOT = 1;
+    private static final int MAGENTA_SLOT = 2;
+    private static final int YELLOW_SLOT = 3;
+    private static final int BLACK_SLOT = 4;
 
-    public ColormancerLecternScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
-        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()));
+    public final Inventory inventory = new SimpleInventory(5) {
+        @Override
+        public void markDirty() {
+            super.markDirty();
+        }
+    };
+    private final ScreenHandlerContext context;
+
+    public ColormancerLecternScreenHandler(int syncId, PlayerInventory playerInventory) {
+        this(syncId, playerInventory, ScreenHandlerContext.EMPTY);
     }
-    public ColormancerLecternScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity) {
-        super(ColormancerScreenHandlers.COLORMANCER_LECTERN_SCREEN_HANDLER, syncId);
-        checkSize( (Inventory) blockEntity, 5);
-        this.inventory = (Inventory) blockEntity;
-        inventory.onOpen(playerInventory.player);
-        this.blockEntity = (ColormancerLecternEntity) blockEntity;
 
-        this.addSlot(new Slot(inventory, 0, 32, 37));
-        this.addSlot(new Slot(inventory, 1, 8,  27));
-        this.addSlot(new Slot(inventory, 2, 56, 27));
-        this.addSlot(new Slot(inventory, 3, 8,  47));
-        this.addSlot(new Slot(inventory, 4, 56, 47));
+    public ColormancerLecternScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
+        super(ModScreenHandlerTypes.COLORMANCER_LECTERN, syncId);
+        this.context = context;
+
+        this.addSlot(new SpecificItemSlot(inventory, BOOK_SLOT, ModItems.COLORMANCER_BOOK, 32, 37));
+        this.addSlot(new SpecificItemSlot(inventory, CYAN_SLOT, Items.CYAN_DYE, 8, 27));
+        this.addSlot(new SpecificItemSlot(inventory, MAGENTA_SLOT, Items.MAGENTA_DYE, 56, 27));
+        this.addSlot(new SpecificItemSlot(inventory, YELLOW_SLOT, Items.YELLOW_DYE, 8, 47));
+        this.addSlot(new SpecificItemSlot(inventory, BLACK_SLOT, Items.BLACK_DYE, 56, 47));
 
         addPlayerHotbar(playerInventory);
         addPlayerInventory(playerInventory);
     }
 
+
     @Override
-    public ItemStack quickMove(PlayerEntity player, int invSlot) {
+    public ItemStack quickMove(PlayerEntity player, int slotIndex) {
         ItemStack newStack = ItemStack.EMPTY;
-        Slot slot = this.slots.get(invSlot);
-        if (slot != null && slot.hasStack()) {
+        Slot slot = this.slots.get(slotIndex);
+        if (slot.hasStack()) {
             ItemStack originalStack = slot.getStack();
             newStack = originalStack.copy();
-            if (invSlot < this.inventory.size()) {
-                if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
+            if (slotIndex < this.inventory.size()) {
+                if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) { // into player inventory
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.insertItem(originalStack, 0, this.inventory.size(), false)) {
+            } else if (!this.insertItem(originalStack, 0, this.inventory.size(), false)) { // into lectern inventory
                 return ItemStack.EMPTY;
             }
 
@@ -62,7 +74,7 @@ public class ColormancerLecternScreenHandler extends ScreenHandler {
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return this.inventory.canPlayerUse(player);
+        return canUse(context, player, ModBlocks.COLORMANCER_LECTERN);
     }
 
     private void addPlayerInventory(PlayerInventory playerInventory) {
@@ -76,6 +88,20 @@ public class ColormancerLecternScreenHandler extends ScreenHandler {
     private void addPlayerHotbar(PlayerInventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 145));
+        }
+    }
+
+    public static class SpecificItemSlot extends Slot {
+        public final Item filterItem;
+
+        public SpecificItemSlot(Inventory inventory, int index, Item filterItem, int x, int y) {
+            super(inventory, index, x, y);
+            this.filterItem = filterItem;
+        }
+
+        @Override
+        public boolean canInsert(ItemStack stack) {
+            return stack.isOf(this.filterItem);
         }
     }
 }

@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/block/gray_glazed_terracotta.png",
+    "description": {
+      "translate": "advancements.colormancer.root.description"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "colormancer:dye_mixture"
+    },
+    "title": {
+      "translate": "advancements.colormancer.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "start"
+    ]
+  ]
+}

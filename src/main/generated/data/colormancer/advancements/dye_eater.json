@@ -1,0 +1,29 @@
+{
+  "parent": "colormancer:colormancer",
+  "criteria": {
+    "dyeeating": {
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "text": "Try eating any dye"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "colormancer:color_vial"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Dye eater"
+    }
+  },
+  "requirements": [
+    [
+      "dyeeating"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
