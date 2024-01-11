@@ -77,6 +77,12 @@ public class ColormancerLecternScreenHandler extends ScreenHandler {
         return canUse(context, player, ModBlocks.COLORMANCER_LECTERN);
     }
 
+    @Override
+    public void onClosed(PlayerEntity player) {
+        super.onClosed(player);
+        this.context.run((world, pos) -> this.dropInventory(player, this.inventory));
+    }
+
     private void addPlayerInventory(PlayerInventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
