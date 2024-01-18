@@ -14,12 +14,15 @@ import net.minecraft.predicate.entity.EntityEffectPredicate;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ModAdvancementProvider extends FabricAdvancementProvider {
     public ModAdvancementProvider(FabricDataOutput output) {
         super(output);
     }
+    public static final List<String> advancementIDs = List.of( "root", "dye_eater", "cyan", "magenta", "yellow", "black", "white" );
 
     @Override
     public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
@@ -41,8 +44,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry dyeEater = Advancement.Builder.create().parent(root)
                 .display(
                         ModItems.DYE_MIXTURE,
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.title"),
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.description"),
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".dye_eater.title"),
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".dye_eater.description"),
                         null, // children to parent advancements don't need a background set
                         AdvancementFrame.TASK,
                         true,
@@ -55,8 +58,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry black = Advancement.Builder.create().parent(dyeEater)
                 .display(
                         Items.BLACK_DYE, // The display icon
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.title"), // The title
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.description"), // The description
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".black.title"), // The title
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".black.description"), // The description
                         null,
                         AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
                         true, // Show toast top right
@@ -70,8 +73,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry cyan = Advancement.Builder.create().parent(dyeEater)
                 .display(
                         Items.CYAN_DYE, // The display icon
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.title"), // The title
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.description"), // The description
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".cyan.title"), // The title
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".cyan.description"), // The description
                         null,
                         AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
                         true, // Show toast top right
@@ -85,8 +88,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry magenta = Advancement.Builder.create().parent(dyeEater)
                 .display(
                         Items.MAGENTA_DYE, // The display icon
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.title"), // The title
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.description"), // The description
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".magenta.title"), // The title
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".magenta.description"), // The description
                         null,
                         AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
                         true, // Show toast top right
@@ -100,8 +103,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry yellow = Advancement.Builder.create().parent(dyeEater)
                 .display(
                         Items.YELLOW_DYE, // The display icon
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.title"), // The title
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.description"), // The description
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".yellow.title"), // The title
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".yellow.description"), // The description
                         null,
                         AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
                         true, // Show toast top right
@@ -115,8 +118,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry white = Advancement.Builder.create().parent(dyeEater)
                 .display(
                         Items.WHITE_DYE, // The display icon
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.title"), // The title
-                        Text.translatable("advancements." + Colormancer.MOD_ID + ".root.description"), // The description
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".white.title"), // The title
+                        Text.translatable("advancements." + Colormancer.MOD_ID + ".white.description"), // The description
                         null,
                         AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
                         true, // Show toast top right
