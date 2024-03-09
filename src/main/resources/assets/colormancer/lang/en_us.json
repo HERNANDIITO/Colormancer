@@ -20,6 +20,17 @@
   "gui.colormancer.colormancer_lectern": "Colormancer lectern",
 
   "advancements.colormancer.root.title": "Colormancer",
-  "advancements.colormancer.root.description": "Become a Colormancer"
+  "advancements.colormancer.root.description": "Become a Colormancer",
 
+  "item.minecraft.potion.effect.white_potion_1": "Short White sickness Potion",
+  "item.minecraft.splash_potion.effect.white_potion_1": "Short Splash Potion of White sickness",
+  "item.minecraft.lingering_potion.effect.white_potion_1": "Short Lingering Potion of White sickness",
+
+  "item.minecraft.potion.effect.white_potion_2": "White sickness Potion",
+  "item.minecraft.splash_potion.effect.white_potion_2": "Splash Potion of White sickness",
+  "item.minecraft.lingering_potion.effect.white_potion_2": "Lingering Potion of White sickness",
+
+  "item.minecraft.potion.effect.white_potion_3": "Long White sickness Potion",
+  "item.minecraft.splash_potion.effect.white_potion_3": "Long Splash Potion of White sickness",
+  "item.minecraft.lingering_potion.effect.white_potion_3": "Long Lingering Potion of White sickness"
 }

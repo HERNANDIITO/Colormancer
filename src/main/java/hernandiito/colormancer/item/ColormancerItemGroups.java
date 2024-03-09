@@ -2,6 +2,7 @@ package hernandiito.colormancer.item;
 
 import hernandiito.colormancer.Colormancer;
 import hernandiito.colormancer.block.ColormancerBlocks;
+import hernandiito.colormancer.potion.ModPotions;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

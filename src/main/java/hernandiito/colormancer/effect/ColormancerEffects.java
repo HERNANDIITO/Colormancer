@@ -30,6 +30,6 @@ public class ColormancerEffects {
 
         WHITE = Registry.register(Registries.STATUS_EFFECT,
                 new Identifier(Colormancer.MOD_ID, "white"),
-                new BlackEffect(StatusEffectCategory.HARMFUL, 0));
+                new BlackEffect(StatusEffectCategory.HARMFUL, 14348010));
     }
 }

@@ -1,6 +1,7 @@
 package hernandiito.colormancer.item;
 
 import hernandiito.colormancer.Colormancer;
+import hernandiito.colormancer.potion.ModPotions;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;

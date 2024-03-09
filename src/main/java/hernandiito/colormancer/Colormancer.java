@@ -5,6 +5,7 @@ import hernandiito.colormancer.block.entity.ColormancerBlockEntities;
 import hernandiito.colormancer.effect.ColormancerEffects;
 import hernandiito.colormancer.item.ColormancerItemGroups;
 import hernandiito.colormancer.item.ColormancerItems;
+import hernandiito.colormancer.potion.ModPotions;
 import hernandiito.colormancer.screen.ColormancerScreenHandlers;
 import net.fabricmc.api.ModInitializer;
 
@@ -24,5 +25,6 @@ public class Colormancer implements ModInitializer {
 		ColormancerBlocks.registerModBlocks();
 		ColormancerScreenHandlers.registerScreenHandlers();
 		ColormancerBlockEntities.registerBlockEntities();
+		ModPotions.registerPotions();
 	}
 }
