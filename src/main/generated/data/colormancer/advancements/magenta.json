@@ -1,0 +1,34 @@
+{
+  "parent": "colormancer:dye_eater",
+  "criteria": {
+    "use_magenta": {
+      "conditions": {
+        "effects": {
+          "colormancer:magenta": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.colormancer.root.description"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "minecraft:magenta_dye"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.colormancer.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "use_magenta"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

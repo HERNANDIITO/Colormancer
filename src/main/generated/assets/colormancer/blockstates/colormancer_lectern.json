@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "colormancer:block/colormancer_lectern",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "colormancer:block/colormancer_lectern"
+    },
+    "facing=south": {
+      "model": "colormancer:block/colormancer_lectern",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "colormancer:block/colormancer_lectern",
+      "y": 270
+    }
+  }
+}
